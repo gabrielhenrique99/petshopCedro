@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+<head>
+	<meta charset="UTF-8">
+	<title>PET SHOP CEDRO</title>
+</head>
+
+<body>
+
+	<!--Usando thymeleaf-->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Código</th>
+				<th>Nome</th>
+				<th>Raça</th>
+				<th>Tutor</th>
+				<th>Idade</th>
+			</tr>
+		</thead>
+		<tbody>
+		<!--Usando for para percorrer todos os animais cadastrados -->
+		<tr th:each = "animal: ${listaAnimais}">
+			<td th:text="${animal.codigo}"></td>
+			<td th:text="${animal.nome}"></td>
+			<td th:text="${animal.raca}"></td>
+			<td th:text="${animal.tutor}"></td>
+			<td th:text="${animal.idade}"></td>
+		</tr>
+		</tbody>
+	</table>
+	
+
+
+<script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
